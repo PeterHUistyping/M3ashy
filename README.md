@@ -11,6 +11,8 @@
     <a href="https://huggingface.co/datasets/Peter2023HuggingFace/NeuMERL">[NeuMERL dataset]</a>
 </p>
 
+![teaser](./docs/img/teaser.png)
+
 # Abstract
 
 High-quality material synthesis is essential for replicating complex surface properties to create realistic digital scenes. However, existing methods often suffer from inefficiencies in time and memory, require domain expertise, or demand extensive training data, with high-dimensional material data further constraining performance. Additionally, most approaches lack multi-modal guidance capabilities and standardized evaluation metrics, limiting control and comparability in synthesis tasks.
