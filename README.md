@@ -1,2 +1,3 @@
-# NeuMaDiff
-NeuMaDiff: Neural Material Synthesis via Hyperdiffusion
+# NeuMaDiff: Neural Material Synthesis via Hyperdiffusion
+
+
