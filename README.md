@@ -13,6 +13,8 @@
 
 ![teaser](./docs/img/teaser.png)
 
+3D models and scene rendered with our synthesized neural materials.
+
 # Abstract
 
 High-quality material synthesis is essential for replicating complex surface properties to create realistic digital scenes. However, existing methods often suffer from inefficiencies in time and memory, require domain expertise, or demand extensive training data, with high-dimensional material data further constraining performance. Additionally, most approaches lack multi-modal guidance capabilities and standardized evaluation metrics, limiting control and comparability in synthesis tasks.
@@ -21,14 +23,20 @@ To address these limitations, we propose **NeuMaDiff**, a novel **neu**ral **ma*
 
 To support future research, we contribute two new material datasets and introduce two BRDF distributional metrics for more rigorous evaluation. We demonstrate the effectiveness of NeuMaDiff through extensive experiments, including a novel statistics-based constrained synthesis approach, which enables the generation of materials of desired categories.
 
-# Dataset
+# Dataset and base model
 
 Our NeuMERL dataset weights are upload at AI community Hugging Face [NeuMERL dataset](https://huggingface.co/datasets/Peter2023HuggingFace/NeuMERL).
+
+The checkpoint of the base models are upload at Hugging Face [Synthesis model checkpoint](https://huggingface.co/Peter2023HuggingFace/NeuMaDiff).
+
+# Installation
+Environment: TODO 
 
 # How to run
 
 TODO
-TODO: add a Python notebook
+
+TODO: also add a Python notebook
 
 # Citation
 

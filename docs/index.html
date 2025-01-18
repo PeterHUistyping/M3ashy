@@ -32,8 +32,10 @@
         </h2>
     </div>
     <div class="row" id="author-row" style="margin:0 auto;">
-        <div class="col-md-12 text-center" style="display: table; margin:0 auto">
-            <table class="author-table" id="author-table">
+        <!-- <div class="col-md-12 text-center" style="display: table; margin:0 auto"> -->
+        <div class="text-center" style="display: table; margin:0 auto">
+            <a href="https://chenliang-zhou.github.io" style="font-size: 18px;">Chenliang Zhou</a>,  <a href="https://peterhuistyping.github.io/" style="font-size: 18px;">Zheyuan Hu</a>,   <a href="https://asztr.github.io/" style="font-size: 18px;">Alejandro Sztrajman</a>, <a href="https://caiyancheng.github.io/academic.html" style="font-size: 18px;">Yancheng Cai</a>,  <a href="https://www.cst.cam.ac.uk/people/yl962" style="font-size: 18px;">Yaru Liu</a>,  <a href="https://www.cl.cam.ac.uk/~aco41/" style="font-size: 18px;">Cengiz Öztireli</a>. 
+            <!-- <table class="author-table" id="author-table">
                 <tr>
                     <td>
                         <a href="https://chenliang-zhou.github.io">Chenliang Zhou</a>
@@ -56,9 +58,11 @@
                         <a href="https://www.cl.cam.ac.uk/~aco41/">Cengiz Öztireli</a>
                     </td>
                 </tr>
-            </table>
-            <br>Department of Computer Science and Technology
-            <br>University of Cambridge<br><br>
+            </table> -->
+            <br>
+            <a href="https://www.cst.cam.ac.uk/ " style="font-size: 14px;">Department of Computer Science and Technology</a>
+            <br>
+            <a href="https://www.cam.ac.uk/" style="font-size: 16px;">University of Cambridge</a></a><br><br>
         </div>
     </div>
 </div>
@@ -98,8 +102,11 @@
 
     </div>
 
-    <img src="img/teaser.png" class="img-responsive" alt="TODO: main result" width="63%"
+    <img src="img/teaser.png" class="img-responsive" alt="TODO: main result" width="43%"
          style="max-height: 450px;margin:auto;"/>
+    <div style="text-align: center;">
+        <figcaption>3D models and scene rendered with our synthesized neural materials.</figcaption>
+    </div>
 
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
@@ -117,12 +124,39 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <h3>
+                Dataset and base model
+            </h3>
+            Our NeuMERL dataset weights are upload at AI community Hugging Face <a href="https://huggingface.co/datasets/Peter2023HuggingFace/NeuMERL">NeuMERL dataset</a>, which contains 2400 BRDFs.
+            <br/>
+            The checkpoint of the base models are upload at Hugging Face <a href="https://huggingface.co/Peter2023HuggingFace/NeuMaDiff">Synthesis model checkpoint</a>.
+
+            <h3>
                 Material synthesis framework
             </h3>
             <figure>
-                <img src="img/arch.png" class="img-responsive" alt="TODO" width="95%"
-                     style="max-height: 450px;margin:auto;"/>
-                <figcaption>TODO</figcaption>
+                <div style="text-align: center;">
+                    <img src="img/architecture.png" class="img-responsive" alt="synthesis framework" width="75%" />
+                    <!--  style="max-height: 450px;margin:auto;" -->
+                </div>
+                <figcaption>
+                    An overview of <b>NeuMaDiff</b>, our novel neural material
+                    synthesis framework, consisting of three main stages. 
+                    <!-- <br/> -->
+                    1 (top left):
+                    Data augmentation using RGB permutation and PCA interpolation
+                    to create an expanded dataset, <i>AugMERL</i>; 
+                    <!-- <br/> -->
+                    2 (middle): Neural field
+                    fitted to individual materials, resulting in <i>NeuMERL</i>, a dataset of
+                    neural material representations;  
+                    <!-- <br/> -->
+                    3 (bottom): Training a multi-modal conditional hyperdiffusion model on NeuMERL to enable
+                    conditional synthesis of high-quality, diverse materials guided by
+                    inputs such as material type, text descriptions, or reference images.
+                    <!-- <br/> -->
+                    We further propose a novel statistics-based constrained synthesis
+                    method to generate materials of a specified type (top right).
+                </figcaption>
             </figure>
         </div>
     </div>
@@ -130,9 +164,95 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <h3>
-                Evaluations
+                Novel metrics for material synthesis 
             </h3>
-            TODO
+                The evaluation mainly focus on the <b>fidelity and diversity</b> of the synthesized materials, which is still an open problem in this field. To fill in the gap, we raise the idea of utilizing Minimum matching distance (MMD), Coverage (COV) and 1-nearest neighbor (1-NNA) with either the image quality metric or the BRDF distribution as underlying distance function.
+                <br/>
+                <br/>
+                Please refer to <a href="https://arxiv.org/abs/2411.12015">our paper</a> about the details of the BRDF distributional metrics. 
+                We demonstrate the effectiveness of NeuMaDiff through extensive experiments, including on this brand-new series of metrics.
+            
+            <h3>
+                Unconditional synthesis evaluation
+            </h3>
+
+            <img src="img/uncond-vis.png" class="img-responsive" alt="uncond-vis" width="95%" />
+            <!--  style="max-height: 450px;margin:auto;" -->
+            <figcaption>
+                Material synthesis across various pipelines. All baseline models fail to capture the underlying distribution effectively, resulting in
+                meaningless samples with severe artefacts in the synthesized materials. In contrast, NeuMaDiff successfully captures the complex neural
+                material distribution, achieving significantly better fidelity and diversity.
+            </figcaption>
+
+            <br/>
+
+            <img src="img/unconditional-synthesis-metric-score.png" class="img-responsive" alt="unconditional-synthesis-metric-score" width="95%" />
+            <!--  style="max-height: 450px;margin:auto;" -->
+            <figcaption>
+                Qualitative evaluation of unconditional synthesis with metrics assessing generation fidelity and diversity. ↓ indicates that a lower
+                score is better and ↑ indicates the opposite. NeuMaDiff significantly outperforms all baseline models across these metrics, underscoring its
+                effectiveness in neural material synthesis.
+            </figcaption>
+ 
+            <h3>
+                Multi-modal synthesis evaluation
+            </h3>
+            We demonstrate the conditional synthesis capabilities of NeuMaDiff across various modalities of input: material type, text description, or material images.
+
+            <br/>
+            <br/>
+
+            <img src="img/type-cond.png" class="img-responsive" alt="type-cond" width="45%" /> 
+            <figcaption>
+                <b>Type</b>-conditioned synthesis.  The synthesized materials
+                are diverse and closely align with the specified material type.
+            </figcaption>
+
+            <br/>
+            <br/>
+
+            <img src="img/text-cond.png" class="img-responsive" alt="text-cond" width="45%" /> 
+            <figcaption>
+                <b>Text</b>-conditioned synthesis. NeuMaDiff synthesizes materials aligning with the texts and generalizes to <i>unseen</i> inputs:
+                “green metal”, “red plastic”, and “highly specular material”.
+            </figcaption>
+
+            <br/>
+            <br/>
+
+            <img src="img/img-cond.png" class="img-responsive" alt="img-cond" width="45%" /> 
+            <figcaption>
+                <b>Image</b>-conditioned synthesis. In each of the six pairs,
+                the left image is the conditioning input, while the right image is
+                the synthesized result. NeuMaDiff effectively generates realistic
+                materials that closely align with the conditioning images.
+            </figcaption>
+        
+
+            <br/>
+            <h3>
+                Constrained synthesis evaluation
+            </h3>
+            We classify materials into seven categories based on
+            their reflective properties: <i>diffuse, metallic, low-specular,
+            medium-specular, high-specular, plastic, and mirror,</i> via a novel approach called constrained synthesis. 
+            <br/>
+            It complements our conditional
+            pipeline by enforcing constraints on unconditionally synthesized samples, allowing for targeted material generation
+            according to desired reflective characteristics. 
+            Please refer to <a href="https://arxiv.org/abs/2411.12015">our paper</a> regarding the statistical constraints details.
+            <br/>
+            <br/>
+            <img src="img/constrained-syn-vis.png" class="img-responsive" alt="constrained-syn-vis" width="85%" />
+            <!--  style="max-height: 450px;margin:auto;" -->
+            
+            <figcaption>
+                Synthesized materials of seven distinct categories using our novel constrained synthesis. Grounded in BRDF statistical analysis,
+                this approach provides enhanced explainability and interpretability compared to standard conditional synthesis methods.
+            </figcaption>
+
+
+            
         <!-- <div class="row" id="bibtex"> -->
             <!-- <div class="col-md-8 col-md-offset-2"> -->
                 <h3>

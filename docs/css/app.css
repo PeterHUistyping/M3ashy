@@ -108,9 +108,10 @@ figure {
 
 figcaption {
     margin: 10px 0 0 0;
-    font-family: Arial, serif;
-    font-weight: bold;
-/*    text-align: center;*/
+    /* font-family: Arial, serif;*/
+    font-family: "Times New Roman", Times, serif; 
+    /* font-weight: bold; */
+    text-align: center;
 }
 
 
@@ -195,4 +196,10 @@ span.highlight {
     font-family: monospace;
     font-size: 0.9em;
     white-space: pre; /* Prevents the content from wrapping */
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
