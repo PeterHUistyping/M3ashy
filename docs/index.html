@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head lang="en">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FV0RC59Q5E"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-FV0RC59Q5E');
+    </script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>NeuMaDiff</title>
+
+     <!-- mirror: F0%9F%AA%9E&lt -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/app.css">
+</head>
+
+<body>
+<div class="container" id="header" style="text-align: center; margin: auto;">
+    <div class="row" id="title-row" style="max-width: 100%; margin: 0 auto; display: inline-block">
+        <h2 class="col-md-12 text-center">
+            <b>NeuMaDiff: Neural Material Synthesis via Hyperdiffusion</b><br>
+            <small>
+                arXiv 
+            </small>
+        </h2>
+    </div>
+    <div class="row" id="author-row" style="margin:0 auto;">
+        <div class="col-md-12 text-center" style="display: table; margin:0 auto">
+            <table class="author-table" id="author-table">
+                <tr>
+                    <td>
+                        <a href="https://chenliang-zhou.github.io">Chenliang Zhou</a>
+                    </td>
+                    <td>
+                        <a href="https://peterhuistyping.github.io/">Zheyuan Hu</a>
+                    </td>
+                    <td>
+                        <a href="https://asztr.github.io/">Alejandro Sztrajman</a>
+                    </td>
+                </tr>
+                <tr>    
+                    <td>
+                        <a href="https://caiyancheng.github.io/academic.html">Yancheng Cai</a>
+                    </td>
+                    <td>
+                        <a href="https://www.cst.cam.ac.uk/people/yl962">Yaru Liu</a>
+                    </td>
+                    <td>
+                        <a href="https://www.cl.cam.ac.uk/~aco41/">Cengiz Öztireli</a>
+                    </td>
+                </tr>
+            </table>
+            <br>Department of Computer Science and Technology
+            <br>University of Cambridge<br><br>
+        </div>
+    </div>
+</div>
+<script>
+    document.getElementById('author-row').style.maxWidth = document.getElementById("title-row").clientWidth + 'px';
+</script>
+<div class="container" id="main">
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4 text-center">
+            <ul class="nav nav-pills nav-justified">
+                <li>
+                    <a href="https://arxiv.org/abs/2411.12015">
+                        <img src="./img/paper_icon.png" alt="paper icon" height="70px">
+                        <h4><strong>Paper</strong></h4>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/PeterHUistyping/NeuMaDiff">
+                        <img alt="github icon" src="./img/github_icon.svg" height="70px">
+                        <h4><strong>Code</strong></h4>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://huggingface.co/datasets/Peter2023HuggingFace/NeuMERL">
+                    <img src="./img/data_icon.webp" height="90px">
+                        <h4><strong>NeuMERL dataset (2.4k)</strong></h4>
+                    </a>
+                </li>
+                <!-- <li>
+                    <a href="">
+                    <img src="./img/youtube_icon.png" height="90px">
+                        <h4><strong>Video</strong></h4>
+                    </a>
+                </li> -->
+            </ul>
+        </div>
+
+    </div>
+
+    <img src="img/teaser.png" class="img-responsive" alt="TODO: main result" width="63%"
+         style="max-height: 450px;margin:auto;"/>
+
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <h3>
+                Abstract
+            </h3>
+            <p class="text-justify">
+                High-quality material synthesis is essential for replicating complex surface properties to create realistic digital scenes. However, existing methods often suffer from inefficiencies in time and memory, require domain expertise, or demand extensive training data, with high-dimensional material data further constraining performance. Additionally, most approaches lack multi-modal guidance capabilities and standardized evaluation metrics, limiting control and comparability in synthesis tasks. <br/>
+                To address these limitations, we propose <b>NeuMaDiff</b>, a novel <b>neu</b>ral <b>ma</b>terial synthesis framework utilizing hyper<b>diff</b>usion. Our method employs neural fields as a low-dimensional representation and incorporates a multi-modal conditional hyperdiffusion model to learn the distribution over material weights. This enables flexible guidance through inputs such as material type, text descriptions, or reference images, providing greater control over synthesis. <br/>
+                 To support future research, we contribute two new material datasets and introduce two BRDF distributional metrics for more rigorous evaluation. We demonstrate the effectiveness of NeuMaDiff through extensive experiments, including a novel statistics-based constrained synthesis approach, which enables the generation of materials of desired categories. 
+            </p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <h3>
+                Material synthesis framework
+            </h3>
+            <figure>
+                <img src="img/arch.png" class="img-responsive" alt="TODO" width="95%"
+                     style="max-height: 450px;margin:auto;"/>
+                <figcaption>TODO</figcaption>
+            </figure>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <h3>
+                Evaluations
+            </h3>
+            TODO
+        <!-- <div class="row" id="bibtex"> -->
+            <!-- <div class="col-md-8 col-md-offset-2"> -->
+                <h3>
+                    Citation  
+                </h3>
+                If you found the paper or code useful, please consider citing, <br/>
+<pre><code>@misc{
+    NeuMaDiff2024,
+   title={NeuMaDiff: Neural Material Synthesis via Hyperdiffusion}, 
+   author={Chenliang Zhou and Zheyuan Hu and Alejandro Sztrajman and Yancheng Cai and Yaru Liu and Cengiz Oztireli},
+   year={2024},
+   eprint={2411.12015},
+   archivePrefix={arXiv},
+   primaryClass={cs.GR},
+   url={https://arxiv.org/abs/2411.12015}, 
+}</code></pre>
+            <!-- </div> -->
+        <!-- </div> -->
+            
+        <br><br>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <p class="text-justify">
+                    The website template was inspired by <a href="https://chenliang-zhou.github.io/FrePolad/">FrePolad</a>.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
