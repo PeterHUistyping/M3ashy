@@ -31,7 +31,6 @@ For material synthesis, the weights of the pre-trained base models are uploaded 
 
 Our NeuMERL dataset are uploaded at AI community Hugging Face [NeuMERL dataset](https://huggingface.co/datasets/Peter2023HuggingFace/NeuMERL). Please download the model weights and put them in the `data/NeuMERL` folder (see details [here](./data/NeuMERL/README.md)).
 
-
 * [X] Release of neural augmented MERL BRDF (NeuMERL) dataset.
 * [X] Release of pre-trained model weights.
 * [X] Release of codebase with README, and Python notebook.
@@ -40,14 +39,17 @@ Our NeuMERL dataset are uploaded at AI community Hugging Face [NeuMERL dataset](
 
 Environment: Python 3.10.15 or other compatible versions.
 
+The Pytorch device is set as descending order of CUDA, Apple MPS and CPU (see [device.py](./src/pytorch/utils/device.py)).
+
 ```bash
 pip install -r requirements.txt
 ```
 
 # How to run
+
 See the interactive [Python notebook - NeuMaDiff.ipynb](./NeuMaDiff.ipynb) for a step-by-step guide, after downloading the data and model weights.
 
-## Neural Material Synthesis via Hyperdiffusion (NeuMaDiff)
+## NeuMaDiff: Neural Material Synthesis via Hyperdiffusion
 
 - 1. Create the output folder.
 
@@ -58,7 +60,7 @@ mkdir -p output/generation/
 
 - 2. Sample synthetic materials from the pre-trained [synthesis model weights](https://huggingface.co/Peter2023HuggingFace/NeuMaDiff).
 
-either 
+either
 
 ```bash
 python src/pytorch/train.py --file_index -1  --pytorch_model_type 2 --sample 1 --model_weights_path model/NeuMaDiff-diversity.pth
@@ -92,7 +94,7 @@ python src/tools/merl_workflow/write_merl_binary.py --file_index -1
 
 We use [Mitsuba](https://www.mitsuba-renderer.org/), a physically based renderer, to render the 3D models with the synthesized materials.  You may find [Neural-BRDF](https://github.com/asztr/Neural-BRDF) helpful.
 
-- 7. [Optionally] Train a new from scratch.
+- [Optionally] Train a new from scratch.
 
 ```bash
 python src/pytorch/train.py --file_index -1  --pytorch_model_type 2
@@ -116,7 +118,7 @@ python src/eval/metrics.py --is_brdf_space 1 --refer_set_size 1  --reference_fol
 python src/eval/metrics.py --is_brdf_space 0 --refer_set_size 1 --reference_img_path "output/img/" --sample_set_size 1 --sample_img_path "output/img/"
 ```
 
-## [Optionally] Training NeuMERL from scratch
+## [Optionally] NeuMERL: Training MLP from scratch
 
 [Optionally] To train the NeuMERL from scratch, please download MERL dataset from [MERL](https://www.merl.com/research/downloads/BRDF) and put the binary files in the `data/merl` folder (see details [here](./data/merl/README.md)). Please download the [initial model weights](https://huggingface.co/datasets/Peter2023HuggingFace/NeuMERL/blob/main/mlp_weights_ini.pth) and put them in the `model` folder (see details [here](model/README.md)).
 
@@ -133,7 +135,7 @@ mkdir -p output/merl/merl_1/blue-metallic-paint/
 python src/pytorch/train.py --pytorch_model_type 1 --file_index 1  
 ```
 
-- Train multiple models in a loop.
+- [Optionally] Train multiple models in a loop.
 
 ```bash
 # For all 24 * 100 materials
@@ -173,4 +175,4 @@ If you found the paper or code useful, please consider citing,
 }
 ```
 
-Acknowledgement: We are thankful to the references and the open-source community for their valuable contributions (see our paper and repo License for a detailed list of references).
+Acknowledgement: We are thankful to the references and the open-source community for their valuable contributions (see our paper and repo [License](./LICENSE) for a detailed list of references).
