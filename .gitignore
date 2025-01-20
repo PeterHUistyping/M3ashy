@@ -1,8 +1,16 @@
-# macos system files
-.DS_Store
-
 .venv/
 .vscode/
 __pycache__/
 
+# macos system files
 .DS_Store
+
+# data and model weights
+data/merl/*.binary
+data/NeuMERL/*.npy
+model/NeuMaDiff-quality.pth
+model/NeuMaDiff-diversity.pth
+model/mlp_weights_ini.pth
+
+# output files
+output/generation/
