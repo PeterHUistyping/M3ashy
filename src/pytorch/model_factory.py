@@ -172,7 +172,7 @@ class Trainer():
     def load_model(self, path):
         if self.model == None:
             self.model = self.set_model_MLP()
-        self.model.load_state_dict(torch.load(path, map_location=self.device))
+        self.model.load_state_dict(torch.load(path, map_location=self.device, weights_only=False))
         self.model.eval()
         return self.model
 
@@ -189,7 +189,7 @@ class Trainer():
         }, path)
     
     def load_checkpoint(self, path):
-        checkpoint = torch.load(path, map_location=self.device)
+        checkpoint = torch.load(path, map_location=self.device, weights_only=False)
         self.model.load_state_dict(checkpoint['model_state_dict'])
         self.ini_optimizer()
         self.optimizer.load_state_dict(checkpoint['optimizer_state_dict'])

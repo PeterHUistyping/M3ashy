@@ -94,7 +94,7 @@ python src/tools/merl_workflow/write_merl_binary.py --file_index -1
 
 We use [Mitsuba](https://www.mitsuba-renderer.org/), a physically based renderer, to render the 3D models with the synthesized materials.  You may find [Neural-BRDF](https://github.com/asztr/Neural-BRDF) helpful.
 
-- [Optionally] Train a new from scratch.
+- [Optionally] train a new from scratch.
 
 ```bash
 python src/pytorch/train.py --file_index -1  --pytorch_model_type 2
@@ -118,9 +118,9 @@ python src/eval/metrics.py --is_brdf_space 1 --refer_set_size 1  --reference_fol
 python src/eval/metrics.py --is_brdf_space 0 --refer_set_size 1 --reference_img_path "output/img/" --sample_set_size 1 --sample_img_path "output/img/"
 ```
 
-## [Optionally] NeuMERL: Training MLP from scratch
+## [Optional] NeuMERL: Training MLP from scratch
 
-[Optionally] To train the NeuMERL from scratch, please download MERL dataset from [MERL](https://www.merl.com/research/downloads/BRDF) and put the binary files in the `data/merl` folder (see details [here](./data/merl/README.md)). Please download the [initial model weights](https://huggingface.co/datasets/Peter2023HuggingFace/NeuMERL/blob/main/mlp_weights_ini.pth) and put them in the `model` folder (see details [here](model/README.md)).
+To train the NeuMERL from scratch, please download MERL dataset from [MERL](https://www.merl.com/research/downloads/BRDF) and put the binary files in the `data/merl` folder (see details [here](./data/merl/README.md)). Please download the [initial model weights](https://huggingface.co/datasets/Peter2023HuggingFace/NeuMERL/blob/main/mlp_weights_ini.pth) and put them in the `model` folder (see details [here](model/README.md)).
 
 - 1. Create the output folder.
 
@@ -135,7 +135,7 @@ mkdir -p output/merl/merl_1/blue-metallic-paint/
 python src/pytorch/train.py --pytorch_model_type 1 --file_index 1  
 ```
 
-- [Optionally] Train multiple models in a loop.
+- [Optionally] train multiple models in a loop.
 
 ```bash
 # For all 24 * 100 materials
@@ -148,7 +148,7 @@ Set File_index = {1, 2, ..., 24} and set from_list = 1,
 python src/pytorch/train.py --pytorch_model_type 1  --file_index 1   --from_list 1
 ```
 
-Remark: Each file denotes 100 materials, and the total number of materials is 24 * 100. The first 1-6 includes 6 * 100 MERL original materials, and the rest 7-12, 13-18, 19-24 are the interpolated materials.
+Remark: Each file contain the filenames of 100 materials , and the total number of materials is 24 * 100. The first 1-6 includes 6 * 100 MERL original materials after color channel permutation, and the rest 7-12, 13-18, 19-24 are the interpolated materials.
 
 - 3. Generated the concatenated npy file from the MLP model weights, which is the NeuMERL dataset.
 
