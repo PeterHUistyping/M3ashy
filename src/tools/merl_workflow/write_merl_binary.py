@@ -88,7 +88,7 @@ def MLP_to_MERL(model):
 
 
 def MLP_to_MERL_BATCH():
-    for index in range(0, 120): # 100
+    for index in range(0, 100): # 100, 120
         model = load_mlp_model(generation_folder_path + "mlp_gen"
                                + str(index) + "/model" + str(index) + ".pth")
         Generated_BRDF = MLP_to_MERL(model)

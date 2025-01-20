@@ -59,7 +59,7 @@ mkdir -p output/generation/
 - 2. Sample synthetic materials from the pre-trained model.
 
 ```bash
-python src/pytorch/train.py --file_index -1  --pytorch_model_type 2 --sample 1
+python src/pytorch/train.py --file_index -1  --pytorch_model_type 2 --sample 1 --model_weights_path model/NeuMaDiff-diversity.pth
 ```
 
 - 3. Create folders for generated materials.
