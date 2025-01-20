@@ -27,11 +27,10 @@ To support future research, we contribute two new material datasets and introduc
 
 # Dataset and base model
 
-For material synthesis, the weights of the pre-trained base models are upload at Hugging Face [Synthesis model weights](https://huggingface.co/Peter2023HuggingFace/NeuMaDiff) Please download the model weights and put them in the `model` folder. (see details [here](model/README.md)).
+For material synthesis, the weights of the pre-trained base models are uploaded at Hugging Face [Synthesis model weights](https://huggingface.co/Peter2023HuggingFace/NeuMaDiff). Please download the model weights and put them in the `model` folder. (see details [here](model/README.md)).
 
-Our NeuMERL dataset weights are upload at AI community Hugging Face [NeuMERL dataset](https://huggingface.co/datasets/Peter2023HuggingFace/NeuMERL). Please download the model weights and put them in the `data/NeuMERL` folder (see details [here](./data/NeuMERL/README.md)).
+Our NeuMERL dataset are uploaded at AI community Hugging Face [NeuMERL dataset](https://huggingface.co/datasets/Peter2023HuggingFace/NeuMERL). Please download the model weights and put them in the `data/NeuMERL` folder (see details [here](./data/NeuMERL/README.md)).
 
-[Optionally] To train the NeuMERL from scratch, please download MERL dataset from [MERL](https://www.merl.com/research/downloads/BRDF) and put the binary files in the `data/merl` folder (see details [here](./data/merl/README.md)). Please download the [initial model weights](https://huggingface.co/datasets/Peter2023HuggingFace/NeuMERL/blob/main/mlp_weights_ini.pth) and put them in the `model` folder (see details [here](model/README.md)).
 
 * [X] Release of neural augmented MERL BRDF (NeuMERL) dataset.
 * [X] Release of pre-trained model weights.
@@ -46,6 +45,7 @@ pip install -r requirements.txt
 ```
 
 # How to run
+See the interactive [Python notebook - NeuMaDiff.ipynb](./NeuMaDiff.ipynb) for a step-by-step guide, after downloading the data and model weights.
 
 ## Neural Material Synthesis via Hyperdiffusion (NeuMaDiff)
 
@@ -56,7 +56,7 @@ pip install -r requirements.txt
 mkdir -p output/generation/
 ```
 
-- 2. Sample synthetic materials from the pre-trained model.
+- 2. Sample synthetic materials from the pre-trained [synthesis model weights](https://huggingface.co/Peter2023HuggingFace/NeuMaDiff).
 
 either 
 
@@ -118,6 +118,8 @@ python src/eval/metrics.py --is_brdf_space 0 --refer_set_size 1 --reference_img_
 
 ## [Optionally] Training NeuMERL from scratch
 
+[Optionally] To train the NeuMERL from scratch, please download MERL dataset from [MERL](https://www.merl.com/research/downloads/BRDF) and put the binary files in the `data/merl` folder (see details [here](./data/merl/README.md)). Please download the [initial model weights](https://huggingface.co/datasets/Peter2023HuggingFace/NeuMERL/blob/main/mlp_weights_ini.pth) and put them in the `model` folder (see details [here](model/README.md)).
+
 - 1. Create the output folder.
 
 ```bash
@@ -143,6 +145,8 @@ Set File_index = {1, 2, ..., 24} and set from_list = 1,
 ```bash
 python src/pytorch/train.py --pytorch_model_type 1  --file_index 1   --from_list 1
 ```
+
+Remark: Each file denotes 100 materials, and the total number of materials is 24 * 100. The first 1-6 includes 6 * 100 MERL original materials, and the rest 7-12, 13-18, 19-24 are the interpolated materials.
 
 - 3. Generated the concatenated npy file from the MLP model weights, which is the NeuMERL dataset.
 
