@@ -1,4 +1,4 @@
-[![Project page](https://img.shields.io/badge/project-page-red.svg)](https:/peterhuistyping.github.io/NeuMaDiff/) [![arXiv](https://img.shields.io/badge/arXiv-2411.12015-orange.svg)](https://arxiv.org/abs/2411.12015)  [![Base model weights](https://img.shields.io/badge/model-weight-yellow.svg)](https://huggingface.co/Peter2023HuggingFace/NeuMaDiff)  [![NeuMERL dataset](https://img.shields.io/badge/NeuMERL-dataset(2.4k)-green.svg)](https://huggingface.co/datasets/Peter2023HuggingFace/NeuMERL) [![Python](https://img.shields.io/badge/Python3-Pytorch-blue.svg)](https://www.python.org/)
+[![Project page](https://img.shields.io/badge/project-page-red.svg)](https://peterhuistyping.github.io/NeuMaDiff/) [![arXiv](https://img.shields.io/badge/arXiv-2411.12015-orange.svg)](https://arxiv.org/abs/2411.12015)  [![Base model weights](https://img.shields.io/badge/model-weight-yellow.svg)](https://huggingface.co/Peter2023HuggingFace/NeuMaDiff)  [![NeuMERL dataset](https://img.shields.io/badge/NeuMERL-dataset(2.4k)-green.svg)](https://huggingface.co/datasets/Peter2023HuggingFace/NeuMERL) [![Python](https://img.shields.io/badge/Python3-Pytorch-blue.svg)](https://www.python.org/)
 
 # NeuMaDiff: Neural Material Synthesis via Hyperdiffusion
 
@@ -7,7 +7,7 @@
 <p align="center">Department of Computer Science and Technology,<br>University of Cambridge.</p>
 
 <p align="center">
-    <a href="https:/peterhuistyping.github.io/NeuMaDiff/">[Project page]</a>  
+    <a href="https://peterhuistyping.github.io/NeuMaDiff/">[Project page]</a>  
     <a href="https://arxiv.org/abs/2411.12015">[Paper]</a>
     <a href="https://huggingface.co/Peter2023HuggingFace/NeuMaDiff">[Base model weights]</a>
     <a href="https://huggingface.co/datasets/Peter2023HuggingFace/NeuMERL">[NeuMERL dataset]</a>
