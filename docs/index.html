@@ -13,7 +13,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <title>NeuMaDiff</title>
+    <title>M^3ashy: Multi-Modal Material Synthesis via Hyperdiffusion.</title>
+    <!-- NeuMaDiff -->
 
      <!-- mirror: F0%9F%AA%9E&lt -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -25,8 +26,10 @@
 <div class="container" id="header" style="text-align: center; margin: auto;">
     <div class="row" id="title-row" style="max-width: 100%; margin: 0 auto; display: inline-block">
         <h2 class="col-md-12 text-center">
-            <b>NeuMaDiff: Neural Material Synthesis via Hyperdiffusion</b><br>
+            <b>M^3ashy: Multi-Modal Material Synthesis via Hyperdiffusion</b><br>
+            <!-- <b>NeuMaDiff: Neural Material Synthesis via Hyperdiffusion</b><br> -->
             <small>
+                Annual Conference on Artificial Intelligence (AAAI'26), Main Technical Track. <br/>
                 <!-- NeurIPS'25 Workshop UniReps<br/> -->
                 <!-- (Unifying Representations in Neural Models) -->
             </small>
@@ -71,6 +74,7 @@
 <script>
     document.getElementById('author-row').style.maxWidth = document.getElementById("title-row").clientWidth + 'px';
 </script>
+
 <div class="container" id="main">
     <div class="row">
         <div class="col-md-4 col-md-offset-4 text-center">
@@ -82,7 +86,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="https://github.com/PeterHUistyping/NeuMaDiff">
+                    <a href="https://github.com/PeterHUistyping/M3ashy">
                         <img alt="github icon" src="./img/icon/github_icon.svg" height="70px">
                         <h4><strong>Code</strong></h4>
                     </a>
@@ -104,11 +108,33 @@
 
     </div>
 
-    <img src="img/teaser.png" class="img-responsive" alt="TODO: main result" width="43%"
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <p align="center">
+            This project is formerly known as <b>NeuMaDiff</b>: <b>Neu</b>ral <b>Ma</b>terial Synthesis via <b>Hyper</b>diffusion.
+            </p>
+        </div>
+    </div>
+
+    <div style="display: flex; justify-content: center; align-items: flex-start; gap: 20px;">
+        <figure style="text-align: center; width: 43%;">
+            <img src="img/teaser.png" class="img-responsive" alt="teaser 1"
+                style="max-height: 450px; width: 100%; margin: auto;"/>
+            <figcaption>3D models rendered with our synthesized neural materials.</figcaption>
+        </figure>
+
+        <figure style="text-align: center; width: 53%;">
+            <img src="img/teaser-kitchen.png" class="img-responsive" alt="teaser 2"
+                style="max-height: 450px; width: 100%; margin: auto;"/>
+            <figcaption>Scenes rendered with our synthesized neural materials produce rich visuals.</figcaption>
+        </figure>
+    </div>
+
+    <!-- <img src="img/teaser.png" class="img-responsive" alt="TODO: main result" width="43%"
          style="max-height: 450px;margin:auto;"/>
     <div style="text-align: center;">
         <figcaption>3D models and scene rendered with our synthesized neural materials.</figcaption>
-    </div>
+    </div> -->
 
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
@@ -116,21 +142,25 @@
                 Abstract
             </h3>
             <p class="text-justify">
-                High-quality material synthesis is essential for replicating complex surface properties to create realistic digital scenes. However, existing methods often suffer from inefficiencies in time and memory, require domain expertise, or demand extensive training data, with high-dimensional material data further constraining performance. Additionally, most approaches lack multi-modal guidance capabilities and standardized evaluation metrics, limiting control and comparability in synthesis tasks. <br/>
-                To address these limitations, we propose <b>NeuMaDiff</b>, a novel <b>neu</b>ral <b>ma</b>terial synthesis framework utilizing hyper<b>diff</b>usion. Our method employs neural fields as a low-dimensional representation and incorporates a multi-modal conditional hyperdiffusion model to learn the distribution over material weights. This enables flexible guidance through inputs such as material type, text descriptions, or reference images, providing greater control over synthesis. <br/>
-                 To support future research, we contribute two new material datasets and introduce two BRDF distributional metrics for more rigorous evaluation. We demonstrate the effectiveness of NeuMaDiff through extensive experiments, including a novel statistics-based constrained synthesis approach, which enables the generation of materials of desired categories. 
-            </p>
-        </div>
-    </div>
+                High-quality material synthesis is essential for replicating complex surface properties to create realistic scenes. Despite advances in the generation of material appearance based on analytic models, the synthesis of real-world measured BRDFs remains largely unexplored. 
 
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
+                To address this challenge, we propose M^3ashy, a novel <b>m</b>ulti-<b>m</b>odal <b>ma</b>terial <b>s</b>ynthesis framework based on <b>hy</b>perdiffusion. M^3ashy enables high-quality reconstruction of complex real-world materials by leveraging neural fields as a compact continuous representation of BRDFs. Furthermore, our multi-modal conditional hyperdiffusion model allows for flexible material synthesis conditioned on material type, natural language descriptions, or reference images, providing greater user control over material generation.
+
+                To support future research, we contribute two new material datasets and introduce two BRDF distributional metrics for more rigorous evaluation. We demonstrate the effectiveness of M^3ashy through extensive experiments, including a novel statistics-based constrained synthesis, which enables the generation of materials of desired categories.
+
+                
+
+                <!-- High-quality material synthesis is essential for replicating complex surface properties to create realistic digital scenes. However, existing methods often suffer from inefficiencies in time and memory, require domain expertise, or demand extensive training data, with high-dimensional material data further constraining performance. Additionally, most approaches lack multi-modal guidance capabilities and standardized evaluation metrics, limiting control and comparability in synthesis tasks. <br/>
+                To address these limitations, we propose <b>NeuMaDiff</b>, a novel <b>neu</b>ral <b>ma</b>terial synthesis framework utilizing hyper<b>diff</b>usion. Our method employs neural fields as a low-dimensional representation and incorporates a multi-modal conditional hyperdiffusion model to learn the distribution over material weights. This enables flexible guidance through inputs such as material type, text descriptions, or reference images, providing greater control over synthesis. <br/>
+                 To support future research, we contribute two new material datasets and introduce two BRDF distributional metrics for more rigorous evaluation. We demonstrate the effectiveness of NeuMaDiff through extensive experiments, including a novel statistics-based constrained synthesis approach, which enables the generation of materials of desired categories.  -->
+            </p>
+
             <h3>
                 Dataset and base model
             </h3>
             Our NeuMERL dataset are uploaded at AI community Hugging Face <a href="https://huggingface.co/datasets/Peter2023HuggingFace/NeuMERL">NeuMERL dataset</a>, which contains 2400 BRDFs.
             <br/>
-            For material synthesis, the weights of the pre-trained base models are uploaded at Hugging Face <a href="https://huggingface.co/Peter2023HuggingFace/NeuMaDiff">Synthesis model weights</a>.
+            For material synthesis, the weights of the pre-trained base models are uploaded at Hugging Face <a href="https://huggingface.co/Peter2023HuggingFace/M3ashy">Synthesis model weights</a>.
 
             <h3>
                 Material synthesis framework
@@ -141,7 +171,7 @@
                     <!--  style="max-height: 450px;margin:auto;" -->
                 </div>
                 <figcaption>
-                    An overview of <b>NeuMaDiff</b>, our novel neural material
+                    Figure: an overview of <b>M^3ashy</b>, our novel neural material
                     synthesis framework, consisting of three main stages. 
                     <!-- <br/> -->
                     1 (top left):
@@ -160,11 +190,7 @@
                     method to generate materials of a specified type (top right).
                 </figcaption>
             </figure>
-        </div>
-    </div>
 
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
             <h3>
                 Novel metrics for material synthesis 
             </h3>
@@ -172,42 +198,40 @@
                 <br/>
                 <br/>
                 Please refer to <a href="https://arxiv.org/abs/2411.12015">our paper</a> about the details of the BRDF distributional metrics. 
-                We demonstrate the effectiveness of NeuMaDiff through extensive experiments, including on this brand-new series of metrics.
+                We demonstrate the effectiveness of <b>M^3ashy</b> through extensive experiments, including on this brand-new series of metrics.
             
             <h3>
                 Unconditional synthesis evaluation
             </h3>
 
-            <img src="img/uncond-vis.png" class="img-responsive" alt="uncond-vis" width="95%" />
+            <img src="img/uncond-vis-long.png" class="img-responsive" alt="uncond-vis" width="95%" />
             <!--  style="max-height: 450px;margin:auto;" -->
             <figcaption>
-                Material synthesis across various pipelines. All baseline models fail to capture the underlying distribution effectively, resulting in
-                meaningless samples with severe artefacts in the synthesized materials. In contrast, NeuMaDiff successfully captures the complex neural
-                material distribution, achieving significantly better fidelity and diversity.
+                Figure: material synthesis across various pipelines. All baseline models fail to capture the underlying distribution effectively, resulting in meaningless samples with severe artefacts in the synthesized materials. In contrast, <b>M^3ashy</b> successfully captures the complex neural material distribution, achieving significantly better fidelity and diversity. Our materials also support spatially varying rendering configurations (last three columns).
             </figcaption>
 
             <br/>
 
-            <img src="img/unconditional-synthesis-metric-score.png" class="img-responsive" alt="unconditional-synthesis-metric-score" width="95%" />
+            <img src="img/unconditional-synthesis-metric-score-2.png" class="img-responsive" alt="unconditional-synthesis-metric-score" width="95%" />
             <!--  style="max-height: 450px;margin:auto;" -->
             <figcaption>
-                Qualitative evaluation of unconditional synthesis with metrics assessing generation fidelity and diversity. ↓ indicates that a lower
-                score is better and ↑ indicates the opposite. NeuMaDiff significantly outperforms all baseline models across these metrics, underscoring its
+                Figure: qualitative evaluation of unconditional synthesis with metrics assessing generation fidelity and diversity. ↓ indicates that a lower
+                score is better and ↑ indicates the opposite. <b>M^3ashy</b> significantly outperforms all baseline models across these metrics, underscoring its
                 effectiveness in neural material synthesis.
             </figcaption>
  
             <h3>
                 Multi-modal synthesis evaluation
             </h3>
-            We demonstrate the conditional synthesis capabilities of NeuMaDiff across various modalities of input: material type, text description, or material images.
+            We demonstrate the conditional synthesis capabilities of <b>M^3ashy</b> across various modalities of input: material type, text description, or material images.
 
             <br/>
             <br/>
 
             <img src="img/type-cond.png" class="img-responsive" alt="type-cond" width="45%" /> 
             <figcaption>
-                <b>Type</b>-conditioned synthesis.  The synthesized materials
-                are diverse and closely align with the specified material type.
+                Figure: <b>type</b>-conditioned synthesis. <br/> 
+                The synthesized materials are diverse and closely align with the specified material type.
             </figcaption>
 
             <br/>
@@ -215,8 +239,8 @@
 
             <img src="img/text-cond.png" class="img-responsive" alt="text-cond" width="45%" /> 
             <figcaption>
-                <b>Text</b>-conditioned synthesis. NeuMaDiff synthesizes materials aligning with the texts and generalizes to <i>unseen</i> inputs:
-                “green metal”, “red plastic”, and “highly specular material”.
+                Figure: <b>text</b>-conditioned synthesis. <br/>
+                <b>M^3ashy</b> synthesizes materials aligning with the texts and generalizes to <i>unseen</i> inputs: “green metal”, “red plastic”, and “highly specular material”.
             </figcaption>
 
             <br/>
@@ -224,9 +248,8 @@
 
             <img src="img/img-cond.png" class="img-responsive" alt="img-cond" width="45%" /> 
             <figcaption>
-                <b>Image</b>-conditioned synthesis. In each of the six pairs,
-                the left image is the conditioning input, while the right image is
-                the synthesized result. NeuMaDiff effectively generates realistic
+                Figure: <b>image</b>-conditioned synthesis. <br/>
+                In each of the six pairs, the left image is the conditioning input, while the right image is the synthesized result. <b>M^3ashy</b> effectively generates realistic
                 materials that closely align with the conditioning images.
             </figcaption>
         
@@ -249,20 +272,78 @@
             <!--  style="max-height: 450px;margin:auto;" -->
             
             <figcaption>
-                Synthesized materials of seven distinct categories using our novel constrained synthesis. Grounded in BRDF statistical analysis,
+                Figure: synthesized materials of seven distinct categories using our novel constrained synthesis. Grounded in BRDF statistical analysis,
                 this approach provides enhanced explainability and interpretability compared to standard conditional synthesis methods.
             </figcaption>
 
+    <h3> Ablation Study </h3>
+
+    To assess the impact of our augmented material dataset Aug-MERL, we further train our model on the original MERL dataset in the unconditional synthesis task. We report both quantitative and qualitative results for this model, presented in the “MERL100” columns. The results indicate that the model trained on Aug-MERL exhibits higher quality and diversity compared to the one trained on MERL, demonstrating the effectiveness of our augmented dataset in enhancing the synthesis pipeline.
+
+    <br/>
+
+    Additionally, we conduct sparse BRDF reconstruction and BRDF compression experiments following a previous method (Gokbudak et al. 2023). For sparse reconstruction, we set the sample size to N = 4000, while for compression, we use a latent dimension of 40. In both experiments, we train the model on either the original MERL dataset or the AugMERL dataset. The results in the below table demonstrate that training on AugMERL consistently enhances material quality across all evaluated metrics, further validating the effectiveness of our augmented dataset.
+
+    <br/>
+    <br/>
+
+    <table border="1">
+    <tr>
+        <th rowspan="2">Metric</th>
+        <th colspan="2">Sparse reconstruction</th>
+        <th colspan="2">Compression</th>
+    </tr>
+    <tr>
+        <th>MERL</th>
+        <th>AugMERL</th>
+        <th>MERL</th>
+        <th>AugMERL</th>
+    </tr>
+    <tr>
+        <td>PSNR (↑)</td>
+        <td>32.2</td>
+        <td><b>36.3</b></td>
+        <td>45.2</td>
+        <td><b>48.3</b></td>
+    </tr>
+    <tr>
+        <td>Delta E (↓)</td>
+        <td>2.1</td>
+        <td><b>1.8</b></td>
+        <td>0.693</td>
+        <td><b>0.623</b></td>
+    </tr>
+    <tr>
+        <td>SSIM (↑)</td>
+        <td>0.972</td>
+        <td><b>0.983</b></td>
+        <td><b>0.994</b></td>
+        <td><b>0.994</b></td>
+    </tr>
+    </table>
+
+    <figcaption>
+        Table: Quantitative comparison of training on MERL versus AugMERL in the sparse BRDF reconstruction and BRDF compression experiments. The results demonstrate that training on AugMERL consistently enhances performance across all metrics.
+    </figcaption>
 
             
-        <!-- <div class="row" id="bibtex"> -->
-            <!-- <div class="col-md-8 col-md-offset-2"> -->
-                <h3>
-                    Citation  
-                </h3>
-                If you found the paper or code useful, please consider citing, <br/>
+       
+        <h3>
+            Citation  
+        </h3>
+            If you found the paper or code useful, please consider citing, <br/>
+<pre><code>@inproceedings{
+    M3ashy2026, 
+    author = {Chenliang Zhou and Zheyuan Hu and Alejandro Sztrajman and Yancheng Cai and Yaru Liu and Cengiz Oztireli}, 
+    title = {M$^{3}$ashy: Multi-Modal Material Synthesis via Hyperdiffusion}, 
+    year = {2026}, 
+    booktitle = {Proceedings of the 40th AAAI Conference on Artificial Intelligence}, 
+    location = {Singapore}, 
+    series = {AAAI'26} 
+}</code></pre>
+
 <pre><code>@misc{
-    NeuMaDiff2024,
+   NeuMaDiff2024,
    title={NeuMaDiff: Neural Material Synthesis via Hyperdiffusion}, 
    author={Chenliang Zhou and Zheyuan Hu and Alejandro Sztrajman and Yancheng Cai and Yaru Liu and Cengiz Oztireli},
    year={2024},
@@ -271,8 +352,6 @@
    primaryClass={cs.GR},
    url={https://arxiv.org/abs/2411.12015}, 
 }</code></pre>
-            <!-- </div> -->
-        <!-- </div> -->
             
         <br><br>
         <div class="row">

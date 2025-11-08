@@ -1,4 +1,4 @@
-The weights of the pre-trained base models are uploaded at Hugging Face [Synthesis model weights](https://huggingface.co/Peter2023HuggingFace/NeuMaDiff). Please download the model weights and put them in the `data/NeuMERL` folder.
+The weights of the pre-trained base models are uploaded at Hugging Face [Synthesis model weights](https://huggingface.co/Peter2023HuggingFace/M3ashy). Please download the model weights and put them in the `data/NeuMERL` folder.
 
 There are two options to use the NeuMERL dataset,
 

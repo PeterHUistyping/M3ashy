@@ -1,33 +1,51 @@
-[![Project page](https://img.shields.io/badge/project-page-red.svg)](https://peterhuistyping.github.io/NeuMaDiff/) [![arXiv](https://img.shields.io/badge/arXiv-2411.12015-orange.svg)](https://arxiv.org/abs/2411.12015)  [![Base model weights](https://img.shields.io/badge/model-weight-yellow.svg)](https://huggingface.co/Peter2023HuggingFace/NeuMaDiff)  [![NeuMERL dataset](https://img.shields.io/badge/NeuMERL-dataset(2.4k)-green.svg)](https://huggingface.co/datasets/Peter2023HuggingFace/NeuMERL) [![Python](https://img.shields.io/badge/Python3-Pytorch-blue.svg)](https://www.python.org/)
+[![Project page](https://img.shields.io/badge/project-page-red.svg)](https://peterhuistyping.github.io/M3ashy/) [![arXiv](https://img.shields.io/badge/arXiv-2411.12015-orange.svg)](https://arxiv.org/abs/2411.12015)  [![Base model weights](https://img.shields.io/badge/model-weight-yellow.svg)](https://huggingface.co/Peter2023HuggingFace/M3ashy)  [![NeuMERL dataset](https://img.shields.io/badge/NeuMERL-dataset(2.4k)-green.svg)](https://huggingface.co/datasets/Peter2023HuggingFace/NeuMERL) [![Python](https://img.shields.io/badge/Python3-Pytorch-blue.svg)](https://www.python.org/)
 
-# NeuMaDiff: Neural Material Synthesis via Hyperdiffusion
-
+# M$^3$ashy: Multi-Modal Material Synthesis via Hyperdiffusion
+<!-- NeuMaDiff: Neural Material Synthesis via Hyperdiffusion -->
+<p align="center"> Annual Conference on Artificial Intelligence (AAAI'26), Main Technical Track.</p>
 <p align="center"><a href="https://chenliang-zhou.github.io">Chenliang Zhou</a>, <a href="https://peterhuistyping.github.io/">Zheyuan Hu</a>, <a href="https://asztr.github.io/">Alejandro Sztrajman</a>, <a href="https://caiyancheng.github.io/academic.html">Yancheng Cai</a>, <a href="https://www.cst.cam.ac.uk/people/yl962">Yaru Liu</a>, <a href="https://www.cl.cam.ac.uk/~aco41/">Cengiz Öztireli</a>.</p>
 
 <p align="center">Department of Computer Science and Technology,<br>University of Cambridge.</p>
 
 <p align="center">
-    <a href="https://peterhuistyping.github.io/NeuMaDiff/">[Project page]</a>  
+    <a href="https://peterhuistyping.github.io/M3ashy/">[Project page]</a>  
     <a href="https://arxiv.org/abs/2411.12015">[Paper]</a>
-    <a href="https://huggingface.co/Peter2023HuggingFace/NeuMaDiff">[Base model weights]</a>
+    <a href="https://huggingface.co/Peter2023HuggingFace/M3ashy">[Base model weights]</a>
     <a href="https://huggingface.co/datasets/Peter2023HuggingFace/NeuMERL">[NeuMERL dataset]</a>
+</p>
+
+
+![teaser](./docs/img/teaser-kitchen.png)
+
+<p align="center">
+    <b>Figure:</b> 3D models and scenes rendered with our synthesized neural materials demonstrate visually rich results.
 </p>
 
 ![teaser](./docs/img/teaser.png)
 
-3D models and scene rendered with our synthesized neural materials.
+<p align="center">
+    This project is formerly known as <b>NeuMaDiff</b>: <b>Neu</b>ral <b>Ma</b>terial Synthesis via <b>Hyper</b>diffusion.
+</p>
+
+<!-- This project is formerly known as **NeuMaDiff**: **Neu**ral **Ma**terial Synthesis via Hyper**diff**usion. -->
 
 # Abstract
 
-High-quality material synthesis is essential for replicating complex surface properties to create realistic digital scenes. However, existing methods often suffer from inefficiencies in time and memory, require domain expertise, or demand extensive training data, with high-dimensional material data further constraining performance. Additionally, most approaches lack multi-modal guidance capabilities and standardized evaluation metrics, limiting control and comparability in synthesis tasks.
+High-quality material synthesis is essential for replicating complex surface properties to create realistic scenes. Despite advances in the generation of material appearance based on analytic models, the synthesis of real-world measured BRDFs remains largely unexplored. 
+
+To address this challenge, we propose M$^3$ashy, a novel **m**ulti-**m**odal **ma**terial **s**ynthesis framework based on **hy**perdiffusion. M$^3$ashy enables high-quality reconstruction of complex real-world materials by leveraging neural fields as a compact continuous representation of BRDFs. Furthermore, our multi-modal conditional hyperdiffusion model allows for flexible material synthesis conditioned on material type, natural language descriptions, or reference images, providing greater user control over material generation.
+
+To support future research, we contribute two new material datasets and introduce two BRDF distributional metrics for more rigorous evaluation. We demonstrate the effectiveness of M$^3$ashy through extensive experiments, including a novel statistics-based constrained synthesis, which enables the generation of materials of desired categories.
+
+<!-- High-quality material synthesis is essential for replicating complex surface properties to create realistic digital scenes. However, existing methods often suffer from inefficiencies in time and memory, require domain expertise, or demand extensive training data, with high-dimensional material data further constraining performance. Additionally, most approaches lack multi-modal guidance capabilities and standardized evaluation metrics, limiting control and comparability in synthesis tasks.
 
 To address these limitations, we propose **NeuMaDiff**, a novel **neu**ral **ma**terial synthesis framework utilizing hyper **diff**usion. Our method employs neural fields as a low-dimensional representation and incorporates a multi-modal conditional hyperdiffusion model to learn the distribution over material weights. This enables flexible guidance through inputs such as material type, text descriptions, or reference images, providing greater control over synthesis.
 
-To support future research, we contribute two new material datasets and introduce two BRDF distributional metrics for more rigorous evaluation. We demonstrate the effectiveness of NeuMaDiff through extensive experiments, including a novel statistics-based constrained synthesis approach, which enables the generation of materials of desired categories.
+To support future research, we contribute two new material datasets and introduce two BRDF distributional metrics for more rigorous evaluation. We demonstrate the effectiveness of NeuMaDiff through extensive experiments, including a novel statistics-based constrained synthesis approach, which enables the generation of materials of desired categories. -->
 
 # Dataset and base model
 
-For material synthesis, the weights of the pre-trained base models are uploaded at Hugging Face [Synthesis model weights](https://huggingface.co/Peter2023HuggingFace/NeuMaDiff). Please download the model weights and put them in the `model` folder. (see details [here](model/README.md)).
+For material synthesis, the weights of the pre-trained base models are uploaded at Hugging Face [Synthesis model weights](https://huggingface.co/Peter2023HuggingFace/M3ashy). Please download the model weights and put them in the `model` folder. (see details [here](model/README.md)).
 
 Our NeuMERL dataset are uploaded at AI community Hugging Face [NeuMERL dataset](https://huggingface.co/datasets/Peter2023HuggingFace/NeuMERL). Please download the model weights and put them in the `data/NeuMERL` folder (see details [here](./data/NeuMERL/README.md)).
 
@@ -58,7 +76,7 @@ See the interactive [Python notebook - NeuMaDiff.ipynb](./NeuMaDiff.ipynb) for a
 mkdir -p output/generation/
 ```
 
-- 2. Sample synthetic materials from the pre-trained [synthesis model weights](https://huggingface.co/Peter2023HuggingFace/NeuMaDiff).
+- 2. Sample synthetic materials from the pre-trained [synthesis model weights](https://huggingface.co/Peter2023HuggingFace/M3ashy).
 
 either
 
@@ -163,15 +181,25 @@ Please feel free to contact us if you have any questions or suggestions.
 If you found the paper or code useful, please consider citing,
 
 ```
+@inproceedings{
+    M3ashy2026, 
+    author = {Chenliang Zhou and Zheyuan Hu and Alejandro Sztrajman and Yancheng Cai and Yaru Liu and Cengiz Oztireli}, 
+    title = {M$^{3}$ashy: Multi-Modal Material Synthesis via Hyperdiffusion}, 
+    year = {2026}, 
+    booktitle = {Proceedings of the 40th AAAI Conference on Artificial Intelligence}, 
+    location = {Singapore}, 
+    series = {AAAI'26} 
+}
+
 @misc{
-       NeuMaDiff2024,
-      title={NeuMaDiff: Neural Material Synthesis via Hyperdiffusion}, 
-      author={Chenliang Zhou and Zheyuan Hu and Alejandro Sztrajman and Yancheng Cai and Yaru Liu and Cengiz Oztireli},
-      year={2024},
-      eprint={2411.12015},
-      archivePrefix={arXiv},
-      primaryClass={cs.GR},
-      url={https://arxiv.org/abs/2411.12015}, 
+    NeuMaDiff2024,
+    title={NeuMaDiff: Neural Material Synthesis via Hyperdiffusion}, 
+    author={Chenliang Zhou and Zheyuan Hu and Alejandro Sztrajman and Yancheng Cai and Yaru Liu and Cengiz Oztireli},
+    year={2024},
+    eprint={2411.12015},
+    archivePrefix={arXiv},
+    primaryClass={cs.GR},
+    url={https://arxiv.org/abs/2411.12015}, 
 }
 ```
 

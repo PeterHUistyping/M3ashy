@@ -203,3 +203,16 @@ img {
     margin-left: auto;
     margin-right: auto;
 }
+
+/* for tables in index.html */
+table {
+  /* Forces the table to use the specified width and distribute columns evenly */
+  table-layout: fixed;
+  width: 100%; /* Or set a specific width like 600px */
+}
+
+/* Optional: To ensure all four sub-columns (MERL, AugMERL, MERL, AugMERL) have the *exact* same width */
+table th, table td {
+  width: 25%;
+  text-align: center;
+}
