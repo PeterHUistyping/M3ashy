@@ -92,6 +92,13 @@
                     </a>
                 </li>
                 <li>
+                    <a href="https://youtu.be/IwNl38BCqeg">
+                    <!-- bilibili: https://www.bilibili.com/video/BV1qmkrBSE5h -->
+                    <img src="./img/icon/video_icon.png" height="90px">
+                        <h4><strong>Video</strong></h4>
+                    </a>
+                </li>
+                <li>
                     <a href="https://huggingface.co/datasets/Peter2023HuggingFace/NeuMERL">
                     <img src="./img/icon/data_icon.webp" height="90px">
                         <h4><strong>NeuMERL dataset (2.4k)</strong></h4>
@@ -107,6 +114,44 @@
         </div>
 
     </div>
+
+     <div style="text-align: center;">
+    <!-- Video player -->
+        <iframe 
+            id="videoFrame" 
+            width="560" 
+            height="315" 
+            src="https://www.youtube.com/embed/IwNl38BCqeg?si=BsG2hIhWNucPgwYY" 
+            title="Video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" 
+            allowfullscreen>
+        </iframe>
+        <br>
+        <!-- Switch Button -->
+        <button id="switchBtn" onclick="switchVideo()" style="margin-top: 10px; padding: 2px 2px; font-size: 12px;">
+            Switch to Bilibili
+        </button>
+    </div>
+
+     <script>
+        let currentVideo = 0;
+        const videos = [
+            "https://www.youtube.com/embed/IwNl38BCqeg?si=BsG2hIhWNucPgwYY",
+            "https://player.bilibili.com/player.html?isOutside=true&aid=115531231271073&bvid=BV1qmkrBSE5h&cid=33921239192&p=1"
+        ];
+
+        function switchVideo() {
+            currentVideo = 1 - currentVideo; // toggles between 0 and 1
+            document.getElementById("videoFrame").src = videos[currentVideo];
+            
+            // Change button text based on current video
+            document.getElementById("switchBtn").textContent = 
+                currentVideo === 0 ? "Switch to Bilibili" : "Switch to YouTube";
+        }
+    </script>
+
 
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
