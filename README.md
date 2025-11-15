@@ -178,7 +178,7 @@ python src/tools/merl_workflow/read_mlp_weight.py --file_index 1
 
 Please feel free to contact us if you have any questions or suggestions.
 
-If you found the paper or code useful, please consider citing,
+If you found the paper or code useful, please consider citing:
 
 ```
 @inproceedings{
@@ -189,17 +189,6 @@ If you found the paper or code useful, please consider citing,
     booktitle = {Proceedings of the 40th AAAI Conference on Artificial Intelligence}, 
     location = {Singapore}, 
     series = {AAAI'26} 
-}
-
-@misc{
-    NeuMaDiff2024,
-    title={NeuMaDiff: Neural Material Synthesis via Hyperdiffusion}, 
-    author={Chenliang Zhou and Zheyuan Hu and Alejandro Sztrajman and Yancheng Cai and Yaru Liu and Cengiz Oztireli},
-    year={2024},
-    eprint={2411.12015},
-    archivePrefix={arXiv},
-    primaryClass={cs.GR},
-    url={https://arxiv.org/abs/2411.12015}, 
 }
 ```
 
