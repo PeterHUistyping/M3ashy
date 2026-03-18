@@ -182,13 +182,17 @@ If you found the paper or code useful, please consider citing:
 
 ```
 @inproceedings{
-    M3ashy2026, 
-    author = {Chenliang Zhou and Zheyuan Hu and Alejandro Sztrajman and Yancheng Cai and Yaru Liu and Cengiz Oztireli}, 
-    title = {M$^{3}$ashy: Multi-Modal Material Synthesis via Hyperdiffusion}, 
-    year = {2026}, 
-    booktitle = {Proceedings of the 40th AAAI Conference on Artificial Intelligence}, 
-    location = {Singapore}, 
-    series = {AAAI'26} 
+  M3ashy2026, 
+  title={M3ashy: Multi-Modal Material Synthesis via Hyperdiffusion}, 
+  volume={40}, 
+  url={https://ojs.aaai.org/index.php/AAAI/article/view/38363}, 
+  DOI={10.1609/aaai.v40i16.38363}, 
+  number={16}, 
+  journal={Proceedings of the AAAI Conference on Artificial Intelligence}, 
+  author={Zhou, Chenliang and Hu, Zheyuan and Sztrajman, Alejandro and Cai, Yancheng and Liu, Yaru and Oztireli, Cengiz}, 
+  year={2026}, 
+  month={Mar.}, 
+  pages={13575-13583} 
 }
 ```
 
