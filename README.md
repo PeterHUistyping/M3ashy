@@ -181,7 +181,7 @@ Please feel free to contact us if you have any questions or suggestions.
 If you found the paper or code useful, please consider citing:
 
 ```
-@inproceedings{
+@article{
   M3ashy2026, 
   title={M3ashy: Multi-Modal Material Synthesis via Hyperdiffusion}, 
   volume={40}, 
