@@ -10,6 +10,7 @@
 <p align="center">
     <a href="https://peterhuistyping.github.io/M3ashy/">[Project page]</a>  
     <a href="https://doi.org/10.1609/aaai.v40i16.38363">[Paper]</a>
+    <a href="https://doi.org/10.48456/tr-1005">[Technical Report]</a>
     <a href="https://arxiv.org/abs/2411.12015">[arXiv]</a>
     <a href="https://huggingface.co/Peter2023HuggingFace/M3ashy">[Base model weights]</a>
     <a href="https://huggingface.co/datasets/Peter2023HuggingFace/NeuMERL">[NeuMERL dataset]</a>
@@ -194,6 +195,18 @@ If you found the paper or code useful, please consider citing:
   year={2026}, 
   month={Mar.}, 
   pages={13575-13583} 
+}
+
+@TechReport{UCAM-CL-TR-1005,
+  author =	 {Hu, Zheyuan},
+  title = 	 {{Neural representation of Bidirectional Reflectance
+         	   Distribution Function}},
+  year = 	 2026,
+  month = 	 mar,
+  url = 	 {https://www.cl.cam.ac.uk/techreports/UCAM-CL-TR-1005.pdf},
+  institution =  {University of Cambridge, Computer Laboratory},
+  doi = 	 {10.48456/tr-1005},
+  number = 	 {UCAM-CL-TR-1005}
 }
 ```
 
