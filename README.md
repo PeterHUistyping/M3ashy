@@ -1,4 +1,4 @@
-[![Project page](https://img.shields.io/badge/project-page-red.svg)](https://peterhuistyping.github.io/M3ashy/) [![arXiv](https://img.shields.io/badge/arXiv-2411.12015-orange.svg)](https://arxiv.org/abs/2411.12015)  [![Base model weights](https://img.shields.io/badge/model-weight-yellow.svg)](https://huggingface.co/Peter2023HuggingFace/M3ashy)  [![NeuMERL dataset](https://img.shields.io/badge/NeuMERL-dataset(2.4k)-green.svg)](https://huggingface.co/datasets/Peter2023HuggingFace/NeuMERL) [![Python](https://img.shields.io/badge/Python3-Pytorch-blue.svg)](https://www.python.org/)
+[![Project page](https://img.shields.io/badge/project-page-red.svg)](https://peterhuistyping.github.io/M3ashy/) [![Paper](https://img.shields.io/badge/Paper-AAAI26-orange.svg)](https://doi.org/10.1609/aaai.v40i16.38363)  [![arXiv](https://img.shields.io/badge/arXiv-2411.12015-orange.svg)](https://arxiv.org/abs/2411.12015)  [![Base model weights](https://img.shields.io/badge/model-weight-yellow.svg)](https://huggingface.co/Peter2023HuggingFace/M3ashy)  [![NeuMERL dataset](https://img.shields.io/badge/NeuMERL-dataset(2.4k)-green.svg)](https://huggingface.co/datasets/Peter2023HuggingFace/NeuMERL) [![Python](https://img.shields.io/badge/Python3-Pytorch-blue.svg)](https://www.python.org/)
 
 # M<sup>3</sup>ashy: Multi-Modal Material Synthesis via Hyperdiffusion
 <!-- NeuMaDiff: Neural Material Synthesis via Hyperdiffusion -->
@@ -9,7 +9,8 @@
 
 <p align="center">
     <a href="https://peterhuistyping.github.io/M3ashy/">[Project page]</a>  
-    <a href="https://arxiv.org/abs/2411.12015">[Paper]</a>
+    <a href="https://doi.org/10.1609/aaai.v40i16.38363">[Paper]</a>
+    <a href="https://arxiv.org/abs/2411.12015">[arXiv]</a>
     <a href="https://huggingface.co/Peter2023HuggingFace/M3ashy">[Base model weights]</a>
     <a href="https://huggingface.co/datasets/Peter2023HuggingFace/NeuMERL">[NeuMERL dataset]</a>
 </p>
